@@ -112,11 +112,13 @@ axios.post('http://emereld-coin.tk:9083/setCallback', {
 
 При переводе на ваш сервер будет послан JSON следующей структуры:
 
-```json
-{ from_id: 2627951,
+```yaml
+{ 
+  from_id: 2627951,
   to_id: 112653548,
   created_at: 1555612247,
-  hash: '5bb8fcefd43242773e34eb485f377463' }
+  hash: '5bb8fcefd43242773e34eb485f377463' 
+}
 ```
 |Параметр|Тип|Описание|
 |-|-|-|
