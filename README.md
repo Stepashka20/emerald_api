@@ -5,7 +5,7 @@
 
 ---
 
-Все запросы должны посылаться методом **POST** на адрес сервера:
+Все запросы должны посылаться методом **POST**, Content-Type application/json:
 
 ```
 http://emereld-coin.tk:9083/<method>
@@ -39,7 +39,16 @@ axios.post('http://emereld-coin.tk:9083/sendPayment', {
 |merchantId|Number|Айди отправителя|
 |toId|Number|Айди получателя|
 |amount|Number|Сумма перевода(в целых числах,больше или равно 1)|
-|token|String|Токен отправителя
+|token|String|Токен отправителя|
+Пример ответа в случае **успеха**:
+```yaml
+{response: "ok"}
+```
+Пример ответа в случае **ошибки**:
+```yaml
+{response: "error",description:"Пользователя не существует"}
+```
+
 #
 #### **getLink**
 Получает ссылку для перевода
@@ -96,7 +105,7 @@ axios.post('http://emereld-coin.tk:9083/sendPayment', {
 |merchantId|Number|Айди отправителя|
 |toId|Number|Айди получателя|
 |amount|Number|Сумма перевода(в целых числах,больше или равно 1)|
-|token|String|Токен отправителя
+|token|String|Токен отправителя|
 
 Пример ответа в случае **успеха**:
 ```yaml
