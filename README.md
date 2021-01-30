@@ -102,6 +102,7 @@ axios.post('http://emereld-coin.tk:9083/getBalance', {
 |-|-|-|
 |userId|Number|ID пользователя,у которого хотите узнать баланс|
 |token|String|Токен|
+|merchantId|Number|Айди владельца токена|
 
 Пример ответа в случае **успеха**:
 ```yaml
