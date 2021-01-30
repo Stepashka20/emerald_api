@@ -87,7 +87,8 @@ axios.post('http://emereld-coin.tk:9083/getLink', {
 const axios = require('axios');
 
 axios.post('http://emereld-coin.tk:9083/getBalance', {
-    userId: 112653548
+    userId: 112653548,
+    token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
 })
   .then(function (response) {
     console.log(response);
@@ -100,6 +101,8 @@ axios.post('http://emereld-coin.tk:9083/getBalance', {
 |Параметр|Тип|Описание|
 |-|-|-|
 |userId|Number|ID пользователя,у которого хотите узнать баланс|
+|token|String|Токен|
+
 Пример ответа в случае **успеха**:
 ```yaml
 {response: "ok", userId:112653548, balance:10.1}
