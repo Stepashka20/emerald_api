@@ -88,7 +88,8 @@ const axios = require('axios');
 
 axios.post('http://emereld-coin.tk:9083/getBalance', {
     userId: 112653548,
-    token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
+    token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d",
+    merchantId: 212633542
 })
   .then(function (response) {
     console.log(response);
