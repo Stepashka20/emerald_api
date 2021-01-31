@@ -46,7 +46,7 @@ axios.post('http://emereld-coin.tk:9083/sendPayment', {
 ```
 Пример ответа в случае **ошибки**:
 ```yaml
-{response: "error",description:"Пользователя не существует"}
+{response: "error",description:"User does not exist"}
 ```
 #
 #### **getLink**
