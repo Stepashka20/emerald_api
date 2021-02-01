@@ -139,6 +139,7 @@ axios.post('http://emereld-coin.tk:2083/setCallback', {
 |merchantId|Number|Айди владельца сервера и токена|
 |callback|String|Адрес callback сервера|
 |token|String|Токен|
+
 Ваш сервер должен ответить строкой: ```emeraldapi```
 
 При переводе EC, на ваш сервер будет передан POST запрос с JSON следующей структуры:
