@@ -123,7 +123,7 @@ const axios = require('axios');
 
 axios.post('http://emereld-coin.tk:2083/setCallback', {
     merchantId: 112653548,
-	callback: "https://emeraldcoin-games.ru/callback"
+    callback: "https://emeraldcoin-games.ru/callback"
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
 })
   .then(function (response) {
@@ -141,6 +141,8 @@ axios.post('http://emereld-coin.tk:2083/setCallback', {
 |token|String|Токен|
 
 Ваш сервер должен ответить строкой: ```emeraldapi```
+
+Если необходмо отвязать сервер,то передайте в параметре callback строку **```del```**
 
 При переводе EC, на ваш сервер будет передан POST запрос с JSON следующей структуры:
 
