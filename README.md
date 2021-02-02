@@ -7,7 +7,7 @@
 Все запросы должны посылаться методом **POST**, Content-Type application/json:
 
 ```
-http://emereld-coin.tk:2083/<method>
+http://emereld-coin.tk:2096/<method>
 ```  
 
 
@@ -19,7 +19,7 @@ http://emereld-coin.tk:2083/<method>
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2083/sendPayment', {
+axios.post('http://emereld-coin.tk:2096/sendPayment', {
     merchantId: 112653548,
     toId: 212653548,
     amount: 1,
@@ -55,7 +55,7 @@ axios.post('http://emereld-coin.tk:2083/sendPayment', {
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2083/getLink', {
+axios.post('http://emereld-coin.tk:2096/getLink', {
     merchantId: 112349092
 })
   .then(function (response) {
@@ -85,7 +85,7 @@ axios.post('http://emereld-coin.tk:2083/getLink', {
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2083/getBalance', {
+axios.post('http://emereld-coin.tk:2096/getBalance', {
     userId: 112653548,
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d",
     merchantId: 212633542
@@ -121,7 +121,7 @@ axios.post('http://emereld-coin.tk:2083/getBalance', {
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2083/setCallback', {
+axios.post('http://emereld-coin.tk:2096/setCallback', {
     merchantId: 112653548,
     callback: "https://emeraldcoin-games.ru/callback"
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
@@ -176,7 +176,7 @@ token - ваш токен
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2083/errorTimes', {
+axios.post('http://emereld-coin.tk:2096/errorTimes', {
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d",
     merchantId: 212633542
 })
