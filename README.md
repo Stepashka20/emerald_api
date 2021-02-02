@@ -7,7 +7,7 @@
 Все запросы должны посылаться методом **POST**, Content-Type application/json:
 
 ```
-http://emereld-coin.tk:2096/<method>
+https://emereld-coin.tk:2096/<method>
 ```  
 
 
