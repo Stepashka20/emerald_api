@@ -49,6 +49,67 @@ axios.post('http://emereld-coin.tk:2096/sendPayment', {
 {response: "error",description:"User does not exist"}
 ```
 #
+#### **getTransfers**
+Получает count последних переводов
+
+```js
+const axios = require('axios');
+
+axios.post('http://emereld-coin.tk:2096/sendPayment', {
+    merchantId: 112653548,
+    count: 1,
+    token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
+})
+  .then(function (response) {
+    console.log(response);
+})
+  .catch(function (error) {
+    console.log(error);
+});
+```
+
+|Параметр|Тип|Описание|
+|-|-|-|
+|merchantId|Number|Айди отправителя|
+|count|Number|Количество последних переводов,которое надо вернуть|
+|token|String|Токен отправителя|
+
+Пример ответа в случае **успеха**:
+```yaml
+{
+    "response": "ok",
+    "data": [
+        {
+            "operation": 1,
+            "sum": 10,
+            "id": 112349092,
+            "tx": 23,
+            "time": "26.3.2021 23:6"
+        },
+        {
+            "operation": 2,
+            "sum": 20,
+            "id": 212653548,
+            "tx": 22,
+            "time": "26.3.2021 23:2"
+        }
+    ]
+}
+```
+Где:
+
+|-|-|-|
+|operation|Тип операции.1-отправка.2-получение|
+|sum|Сумма перевода|
+|id|Id пользователя(если operation=2,то в id содержится твой же merchantId|
+|tx|Уникальный id перевода|
+|time|Время перевода|
+
+Пример ответа в случае **ошибки**:
+```yaml
+{response: "error",description:"Missing input data"}
+```
+#
 #### **getLink**
 Получает ссылку для перевода
 
