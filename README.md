@@ -57,7 +57,7 @@ const axios = require('axios');
 
 axios.post('http://emereld-coin.tk:2096/getTransfers', {
     merchantId: 112653548,
-    count: 1,
+    count: 2,
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
 })
   .then(function (response) {
@@ -80,18 +80,16 @@ axios.post('http://emereld-coin.tk:2096/getTransfers', {
     "response": "ok",
     "data": [
         {
-            "operation": 1,
             "sum": 10,
             "id": 112349092,
             "tx": 23,
             "time": "26.3.2021 23:6"
         },
         {
-            "operation": 2,
-            "sum": 20,
-            "id": 212653548,
-            "tx": 22,
-            "time": "26.3.2021 23:2"
+            "sum": 13,
+            "id": 112349092,
+            "tx": 19,
+            "time": "26.3.2021 23:0"
         }
     ]
 }
@@ -100,9 +98,8 @@ axios.post('http://emereld-coin.tk:2096/getTransfers', {
 
 |Параметр ответа|Описание|
 |-|-|
-|operation|Тип операции.1-отправка.2-получение|
 |sum|Сумма перевода|
-|id|Id пользователя(если operation=2,то в id содержится твой же merchantId|
+|id|Id отправителя|
 |tx|Уникальный id перевода|
 |time|Время перевода|
 
