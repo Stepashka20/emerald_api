@@ -55,7 +55,7 @@ axios.post('http://emereld-coin.tk:2096/sendPayment', {
 ```js
 const axios = require('axios');
 
-axios.post('http://emereld-coin.tk:2096/sendPayment', {
+axios.post('http://emereld-coin.tk:2096/getTransfers', {
     merchantId: 112653548,
     count: 1,
     token: "7{H6rY6DPf~W#mb6mtI3JY4W9yB8j@?d"
@@ -98,6 +98,7 @@ axios.post('http://emereld-coin.tk:2096/sendPayment', {
 ```
 Где:
 
+|Параметр ответа|Описание|
 |-|-|-|
 |operation|Тип операции.1-отправка.2-получение|
 |sum|Сумма перевода|
