@@ -70,9 +70,9 @@ axios.post('http://emereld-coin.tk:2096/getTransfers', {
 
 |Параметр|Тип|Описание|
 |-|-|-|
-|merchantId|Number|Айди отправителя|
+|merchantId|Number|Айди владельца токена|
 |count|Number|Количество последних переводов,которое надо вернуть|
-|token|String|Токен отправителя|
+|token|String|Токен|
 
 Пример ответа в случае **успеха**:
 ```yaml
